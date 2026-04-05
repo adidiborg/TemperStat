@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TemperStat — UI Mockup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <style>
+      .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+      body {
+        background: #f5f5f5;
+      }
+      .mockup-label {
+        text-align: center;
+        color: #999;
+        font-size: 0.75em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 1.5rem 0 0.25rem;
+      }
+      hr.sep {
+        border: none;
+        border-top: 2px dashed #dbdbdb;
+        margin: 2.5rem auto;
+        width: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================================================================== -->
+    <!--  PAGE 1 — Main Dashboard  (GET /)                                  -->
+    <!-- ================================================================== -->
+    <p class="mockup-label">&#9679; Main Dashboard &mdash; <code>GET /</code></p>
+
+    <section class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <img
+              src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png"
+              alt="pi"
+              width="50"
+              height="50"
+            />
+            &nbsp;&nbsp;&nbsp;&nbsp;TemperStat
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <br />
+
+    <!-- Temperature Card -->
+    <div class="container center">
+      <div class="box">
+        <h1 class="title">Temperature</h1>
+        <h1
+          class="subtitle"
+          style="color: hsl(217, 71%, 53%); font-size: 1.7em"
+        >
+          28 &#8451;
+        </h1>
+        <h1 class="subtitle" style="color: hsl(348, 100%, 61%)">
+          Max : : 32
+        </h1>
+        <h1 class="subtitle" style="color: hsl(141, 53%, 53%)">
+          Min : : 24
+        </h1>
+      </div>
+    </div>
+
+    <!-- Humidity Card -->
+    <div class="container center">
+      <div class="box">
+        <h1 class="title">Humidity</h1>
+        <h1
+          class="subtitle"
+          style="color: hsl(204, 86%, 53%); font-size: 1.7em"
+        >
+          65 %
+        </h1>
+        <h1 class="subtitle" style="color: hsl(204, 86%, 53%)">
+          Max : : 72
+        </h1>
+        <h1 class="subtitle" style="color: orange">Min : : 58</h1>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Email Export Form -->
+    <div class="container center">
+      <div class="field center">
+        <div class="control">
+          <form onsubmit="return false;">
+            <input
+              class="input is-info is-rounded"
+              type="text"
+              placeholder="Enter Email to Export CSV"
+              name="email"
+              style="
+                width: 20em;
+                color: hsl(204, 86%, 53%);
+                font-weight: 500;
+                letter-spacing: 1px;
+              "
+            />&nbsp;&nbsp;
+            <button class="button is-rounded is-info" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Readings Table -->
+    <div class="container center">
+      <table class="table center">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>14:30:05</td><td>27</td><td>62</td></tr>
+          <tr><td>14:30:10</td><td>27</td><td>63</td></tr>
+          <tr><td>14:30:15</td><td>28</td><td>64</td></tr>
+          <tr><td>14:30:20</td><td>28</td><td>64</td></tr>
+          <tr><td>14:30:25</td><td>29</td><td>65</td></tr>
+          <tr><td>14:30:30</td><td>30</td><td>66</td></tr>
+          <tr><td>14:30:35</td><td>31</td><td>68</td></tr>
+          <tr><td>14:30:40</td><td>32</td><td>70</td></tr>
+          <tr><td>14:30:45</td><td>30</td><td>72</td></tr>
+          <tr><td>14:30:50</td><td>29</td><td>65</td></tr>
+          <tr><td>14:30:55</td><td>28</td><td>65</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================================================================== -->
+    <!--  PAGE 2 — Mail Confirmation  (POST /mail)                          -->
+    <!-- ================================================================== -->
+    <hr class="sep" />
+    <p class="mockup-label">&#9679; Mail Confirmation &mdash; <code>POST /mail</code></p>
+
+    <section class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <img
+              src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png"
+              alt="pi"
+              width="50"
+              height="50"
+            />
+            &nbsp;&nbsp;&nbsp;&nbsp;TemperStat
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <br />
+
+    <div class="notification is-success center subtitle">
+      <strong>Mail Successfully Sent to **********@gmail.com</strong>
+    </div>
+  </body>
+</html>
